@@ -29,7 +29,7 @@ public class ProductController {
                              @RequestParam(required = false) BigDecimal maxPrice,
                              @RequestParam(required = false) Integer minStock,
                              @RequestParam(defaultValue = "id") String sortBy,
-                             @RequestParam(defaultValue = "desc") String direction) {
+                             @RequestParam(defaultValue = "asc") String direction) {
         if (page < 0 || size < 1 || size > 100)
             throw new org.springframework.web.server.ResponseStatusException(HttpStatus.BAD_REQUEST, "Phân trang không hợp lệ (size 1–100)");
         return service.search(brand, minPrice, maxPrice, minStock, page, size, sortBy, direction);

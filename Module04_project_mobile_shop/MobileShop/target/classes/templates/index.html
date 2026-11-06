@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="_csrf" th:content="${_csrf.token}">
-  <meta name="_csrf_header" th:content="${_csrf.headerName}">
-  <title>Mobile SHOP · Quản lý cửa hàng</title>
-  <link rel="stylesheet" th:href="@{/css/app.css}">
-  <script defer th:src="@{/js/app.js}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <title>Mobile SHOP · Quản lý cửa hàng</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <script defer th:src="@{/js/app.js}"></script>
 </head>
 <body class="admin-page">
-  <header class="topbar">
+<header class="topbar">
     <div class="brand"><span class="logo-badge">▣</span><span>Mobile <b>SHOP</b></span></div>
     <div class="top-actions"><span class="today">Hệ thống quản lý cửa hàng</span><span class="user-avatar">AD</span>
-      <form th:action="@{/logout}" method="post">
-        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-        <button type="submit" class="logout-button">Sign out ↗</button>
-      </form>
+        <form th:action="@{/logout}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <button type="submit" class="logout-button">Sign out ↗</button>
+        </form>
     </div>
-  </header>
-  <aside class="sidebar" aria-label="Danh mục quản lý">
+</header>
+<aside class="sidebar" aria-label="Danh mục quản lý">
     <p class="side-label">MENU</p>
     <nav>
-      <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span> Dashboard</button>
-      <button class="nav-item" data-view="customers"><span class="nav-icon">♙</span> Customer</button>
-      <button class="nav-item" data-view="products"><span class="nav-icon">▣</span> Products</button>
-      <button class="nav-item" data-view="invoices"><span class="nav-icon">▤</span> Invoices</button>
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span> Dashboard</button>
+        <button class="nav-item" data-view="customers"><span class="nav-icon">♙</span> Customer</button>
+        <button class="nav-item" data-view="products"><span class="nav-icon">▣</span> Products</button>
+        <button class="nav-item" data-view="invoices"><span class="nav-icon">▤</span> Invoices</button>
     </nav>
     <div class="sidebar-bottom">MOBILE SHOP ADMIN <small>Spring Boot · MySQL</small></div>
-  </aside>
-  <main id="main-content" class="workspace" aria-live="polite">
-    <h1>Dashboard</h1><p>Đang tải dữ liệu...</p>
-  </main>
-  <div id="modal-root"></div>
-  <div id="toast" role="status" aria-live="polite"></div>
+</aside>
+<main id="main-content" class="workspace" aria-live="polite">
+    <h1>Dashboard</h1>
+    <p>Đang tải dữ liệu...</p>
+</main>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

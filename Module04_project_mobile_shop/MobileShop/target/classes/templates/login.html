@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Đăng nhập | Mobile SHOP</title>
-  <link rel="stylesheet" th:href="@{/css/app.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng nhập | Mobile SHOP</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
 </head>
 <body class="login-page">
-  <section class="login-card">
+<section class="login-card">
     <div class="login-logo"><span class="logo-badge">▣</span> Mobile <b>SHOP</b></div>
     <h1>Please sign in</h1>
     <p class="muted">Đăng nhập để quản lý cửa hàng điện thoại</p>
@@ -15,16 +16,18 @@
     <p th:if="${param.registrationDisabled}" class="form-error">Chức năng đăng ký đang bị tắt.</p>
     <p th:if="${param.logout}" class="success-note">Bạn đã đăng xuất.</p>
     <form th:action="@{/login}" method="post">
-      <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-      <label for="username">Tên đăng nhập</label>
-      <input id="username" name="username" type="text" placeholder="Please enter your username ..." required autocomplete="username" autofocus>
-      <label for="password">Mật khẩu</label>
-      <input id="password" name="password" type="password" placeholder="Please enter your password ..." required autocomplete="current-password">
-      <label class="check-row"><input name="remember-me" type="checkbox" value="on"> Remember me</label>
-      <button class="primary full" type="submit">Sign in</button>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <label for="username">Tên đăng nhập</label>
+        <input id="username" name="username" type="text" placeholder="Please enter your username ..." required
+               autocomplete="username" autofocus>
+        <label for="password">Mật khẩu</label>
+        <input id="password" name="password" type="password" placeholder="Please enter your password ..." required
+               autocomplete="current-password">
+        <label class="check-row"><input name="remember-me" type="checkbox" value="on"> Remember me</label>
+        <button class="primary full" type="submit">Sign in</button>
     </form>
     <p class="login-footnote">Chưa có tài khoản? <a th:href="@{/register}">Đăng ký tài khoản Admin</a></p>
     <footer>© 2026 · Mobile SHOP</footer>
-  </section>
+</section>
 </body>
 </html>

@@ -1,5 +1,5 @@
 'use strict';
-// Mobile SHOP: giao diện dựa trên Figma, tất cả dữ liệu bảng lấy từ REST API + MySQL.
+
 const $ = (selector, root = document) => root.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({
     '&': '&amp;',
